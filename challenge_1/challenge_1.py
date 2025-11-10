@@ -1,12 +1,14 @@
-def to_binary(decimal):
-    if decimal == 0:
-        return "0"
+def to_decimal(binary):
+    decimal = 0
+    power = 0
+    for digit in binary[::-1]:
+        if digit == '1':
+            decimal += 2 ** power
+        power += 1
 
-    binary = ""
-    while decimal > 0:
-        remainder = decimal % 2
-        binary = str(remainder) + binary
-        decimal = decimal // 2
+    return decimal
 
-    return binary
-
+print(to_decimal("101"))
+print(to_decimal("1010"))
+print(to_decimal("10010"))
+print(to_decimal("1010101"))
