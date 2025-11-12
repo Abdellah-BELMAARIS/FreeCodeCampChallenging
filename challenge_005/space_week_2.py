@@ -15,6 +15,7 @@ def has_exoplanet(readings):
     return False
 
 
+
 print(has_exoplanet("665544554"))
 print(has_exoplanet("FGFFCFFGG"))
 print(has_exoplanet("MONOPLONOMONPLNOMPNOMP"))
